@@ -1,0 +1,25 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /panel/
+Disallow: /includes/
+Disallow: /tmp/
+Disallow: /search/
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*.env$
+Disallow: /*.bak$
+Disallow: /*.sql$
+Disallow: /*.zip$
+
+User-agent: Googlebot
+Allow: /catalog/
+Allow: /contacts/
+Crawl-delay: 2
+
+User-agent: Yandex
+Allow: /catalog/
+Allow: /contacts/
+Crawl-delay: 3
+Clean-param: utm_source /catalog/
+
+Sitemap: https://yanaboreisha23.github.io/seo/sitemap.xml
