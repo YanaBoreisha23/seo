@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда коммерческой недвижимости | Офисы, склады, торговые площади | RentHouse</title>
+    <meta name="description" content="Сдам коммерческую недвижимость: офисы, склады, магазины и производственные помещения. ⚡ Быстрое размещение объявлений. Работаем с юрлицами и ИП.">
+    <meta name="keywords" content="аренда офиса, снять склад, аренда торгового помещения, коммерческая недвижимость, аренда под бизнес">
+    <style>
+        /* Общие стили из предыдущих примеров */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e67e22;
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .commercial-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1499793983690-e29da59ef1c2') center/cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            padding: 4rem 2rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .property-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .property-info {
+            padding: 1.5rem;
+        }
+
+        .price-tag {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <h1>Аренда коммерческой недвижимости</h1>
+        <nav aria-label="Основное меню">
+            <ul>
+                <li><a href="lt.html">Главная</a></li>
+                <li><a href="lt copy.html">Жилье</a></li>
+                <li><a href="lt copy 2.html">Коммерческая</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="commercial-hero">
+            <h2>Найдите идеальное помещение для бизнеса</h2>
+            <p>Более 1500 коммерческих объектов в 25 городах Беларуси</p>
+        </section>
+
+        <section class="process-steps">
+            <div class="step-card">
+                <h3>1. Поиск</h3>
+                <p>Используйте фильтры для выбора подходящих параметров</p>
+            </div>
+            <div class="step-card">
+                <h3>2. Просмотр</h3>
+                <p>Организуем онлайн или личный просмотр объекта</p>
+            </div>
+            <div class="step-card">
+                <h3>3. Договор</h3>
+                <p>Юридическое сопровождение сделки</p>
+            </div>
+        </section>
+
+        <section class="properties-grid">
+            <article class="property-card">
+                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36" 
+                     alt="Современный офис в бизнес-центре Минска">
+                <div class="property-info">
+                    <div class="price-tag">$1200/мес</div>
+                    <h4>Офис 45 м²</h4>
+                    <p>Минск, пр. Независимости</p>
+                    <ul>
+                        <li>✅ Конференц-зал</li>
+                        <li>🖥 IT-инфраструктура</li>
+                        <li>🚗 Парковка</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="property-card">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" 
+                     alt="Складское помещение с грузовым лифтом">
+                <div class="property-info">
+                    <div class="price-tag">$2500/мес</div>
+                    <h4>Склад 500 м²</h4>
+                    <p>Гомель, промзона</p>
+                    <ul>
+                        <li>🏗 Высота потолков 6м</li>
+                        <li>🚛 Подъезд для фур</li>
+                        <li>🔐 Охрана 24/7</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section class="contact-form">
+            <h2>Найти помещение</h2>
+            <form>
+                <input type="text" placeholder="Тип помещения" required>
+                <input type="number" placeholder="Площадь (м²)">
+                <input type="text" placeholder="Локация">
+                <textarea placeholder="Особые требования" rows="4"></textarea>
+                <button type="submit">Найти объекты</button>
+            </form>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <nav aria-label="Навигационная цепочка">
+            <ol>
+                <li><a href="lt.html">Главная</a></li>
+                <li>Текущая страница</li>
+            </ol>
+        </nav>
+    </footer>
+</body>
+</html>
