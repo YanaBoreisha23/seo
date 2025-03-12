@@ -6,7 +6,38 @@
     <title>Аренда недвижимости | Снять квартиру, дом, офис | RentHouse</title>
     <meta name="description" content="Аренда жилой и коммерческой недвижимости в 50 городах Беларуси. Без посредников! Прямые договоры с проверенными собственниками. ✅ Гарантия безопасной сделки">
     <meta name="keywords" content="аренда квартиры, снять дом, аренда офиса Гродно, долгосрочная аренда, посуточная аренда">
+    <meta property="og:title" content="Аренда недвижимости в Беларуси | RentHouse">
+    <meta property="og:description" content="Снимите квартиру, дом или офис без посредников в Беларуси. Проверенные собственники и безопасные сделки.">
+    <meta property="og:url" content="https://renthouse.ru/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/your-image.jpg">
     <link rel="canonical" href="https://renthouse.ru/">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Apartment",
+          "name": "Квартира в центре Минска",
+          "description": "Комфортная однокомнатная квартира в центре города с хорошим ремонтом и удобствами.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Ленина, 10",
+            "addressLocality": "Минск",
+            "addressRegion": "Минская область",
+            "postalCode": "220000",
+            "addressCountry": "Беларусь"
+          },
+          "url": "https://example.com/real-estate/1",
+          "image": "https://example.com/real-estate/1.jpg",
+          "price": "500",
+          "priceCurrency": "BYN",
+          "availableFrom": "2025-03-01",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+375 29 123 4567",
+            "contactType": "Sales"
+          }
+        }
+    </script>
     <style>
         * {
             box-sizing: border-box;
@@ -83,6 +114,107 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
+        /* Стили для секции контактов */
+        .contacts-section {
+            padding: 4rem 2rem;
+            background: #ffffff;
+        }
+
+        .contact-block {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .contact-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin: 1rem 0;
+        }
+
+        .contact-list a {
+            color: #34495e;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-list a:hover {
+            color: #e74c3c;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background: #2c3e50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #34495e;
+        }
+
+        /* Плавающая кнопка */
+        .floating-contact {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #27ae60;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
         footer {
             background: #34495e;
             color: white;
@@ -100,6 +232,101 @@
             color: #bdc3c7;
             text-decoration: none;
         }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+
+            .hero {
+                height: auto;
+                margin: 1rem 0;
+            }
+
+            .offer-card img {
+                height: 250px;
+            }
+
+            .offer-details {
+                padding: 1rem;
+            }
+
+            .advantages {
+                padding: 2rem 1rem;
+            }
+
+            .advantages ul {
+                grid-template-columns: 1fr;
+            }
+
+            .advantages li {
+                padding: 1.5rem;
+            }
+
+            .contacts-section {
+                padding: 2rem 1rem;
+            }
+
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-contact {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+            }
+
+            footer nav ol {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .offer-card img {
+                height: 200px;
+            }
+
+            nav ul {
+                gap: 0.75rem;
+            }
+
+            .offer-details p {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,12 +334,9 @@
         <h1>Аренда проверенной недвижимости в Беларуси</h1>
         <nav aria-label="Основное меню">
             <ul>
-                                   
-                        <li><a href="lt.html">Главная</a></li>
-                        <li><a href="lt copy.html">Жилье</a></li>
-                        <li><a href="lt copy 2.html">Коммерческая</a></li>
-                    
-                
+                <li><a href="index.html" target="_blank" rel="noopener noreferrer">Аренда недвижимости в Беларуси</a></li>
+                <li><a href="lt copy.html" target="_blank" rel="noopener noreferrer">Аренда квартир и домов</a></li>
+                <li><a href="lt copy 2.html" target="_blank" rel="noopener noreferrer">Аренда офисов и коммерческих помещений</a></li>
             </ul>
         </nav>
     </header>
@@ -121,11 +345,11 @@
         <section class="hero" aria-labelledby="mainOffer">
             <h2 id="mainOffer" class="visually-hidden">Специальные предложения</h2>
             <div class="offer-card">
-                <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
-                     alt="Современная квартира-студия в центре Гродно с панорамными окнами"
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                     alt="Современная квартира-студия с панорамными окнами"
                      loading="lazy">
                 <div class="offer-details">
-                    <h3>Аренда квартир в Гродно от 9 00₽/мес</h3>
+                    <h3>Аренда квартир в Гродно от 900₽/мес</h3>
                     <p>🔑 Без залога | 🛋 Меблированные | ✅ Проверенные собственники</p>
                 </div>
             </div>
@@ -152,12 +376,58 @@
                 </li>
             </ul>
         </section>
+
+        <!-- Секция контактов -->
+        <section class="contacts-section" aria-labelledby="contactHeading">
+            <div class="contact-block">
+                <h2 id="contactHeading">Свяжитесь с нами</h2>
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <h3>Контактная информация</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <a href="tel:+375291234567">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                    +375 (29) 123-45-67
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@renthouse.by">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                                    </svg>
+                                    info@renthouse.by
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Форма обратной связи</h3>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Ваш телефон" required>
+                            <button type="submit" class="submit-btn">Заказать звонок</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Плавающая кнопка связи -->
+        <div class="floating-contact" onclick="window.location.href='#contactHeading'">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="white">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </div>
     </main>
 
     <footer role="contentinfo">
         <nav aria-label="Навигационная цепочка">
             <ol>
-                <li><a href="lt.html">Главная</a></li>
+                <li><a href="index.html" target="_blank" rel="noopener noreferrer">Главная</a></li>
                 <li>Текущая страница</li>
             </ol>
         </nav>
